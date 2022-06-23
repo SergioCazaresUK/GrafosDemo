@@ -9,15 +9,12 @@ namespace Grafos
     public class CantGrafos
     {
         int[,] Adyacencia;
-        int[] indegree;
         int nodo;
 
         public CantGrafos(int Nodos)
         {
             nodo = Nodos;
             Adyacencia = new int[nodo, nodo];
-
-            indegree = new int[nodo];
         }
 
         public void Arista(int NodoInicio, int NodoFinal)
@@ -41,6 +38,7 @@ namespace Grafos
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine(Columnas);
+
                 for(Filas = 1; Filas < nodo; Filas++)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
