@@ -27,24 +27,24 @@ namespace Grafos
 
         public void MuestraAdyacencia()
         {
-            int n = 1;
-            int m = 1;
+            int Columnas = 1;
+            int Filas = 1;
 
             Console.ForegroundColor = ConsoleColor.Yellow;
 
-            for (n = 1; n < nodo; n++)
-                Console.WriteLine(n);
+            for (Columnas = 1; Columnas < nodo; Columnas++)
+                Console.WriteLine("\t{0}", Columnas);
 
             Console.WriteLine();
 
-            for(n = 1; n < nodo; n++)
+            for(Columnas = 1; Columnas < nodo; Columnas++)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine(n);
-                for(m = 1; m < nodo; m++)
+                Console.WriteLine(Columnas);
+                for(Filas = 1; Filas < nodo; Filas++)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine(Adyacencia[n, m]);
+                    Console.WriteLine("\t{0}", Adyacencia[Columnas, Filas]);
                 }
                 Console.WriteLine();
             }
